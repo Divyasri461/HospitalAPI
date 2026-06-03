@@ -14,7 +14,7 @@ Version Control: Git & GitHub
 **Features**
 **🔹 Patient Management**
 
-Register new patients with:
+****Register new patients with:**
 
 Patient Code (Unique)
 Full Name
@@ -24,12 +24,12 @@ Phone Number (Unique)
 Email (Optional, Unique)
 
 
-Update patient details
+**Update patient details**
 Soft delete (Deactivate patient)
 Retrieve all active patients with calculated age
 
 
-🔹 Doctor Management
+**🔹 Doctor Management**
 
 **Store doctor details:**
 
@@ -41,7 +41,7 @@ Consultation Fee
 Availability Status
 
 
-Search doctors by:
+**Search doctors by:**
 
 Specialization
 Availability
@@ -49,18 +49,18 @@ Availability
 
 
 
-🔹 Appointment Management
+**🔹 Appointment Management**
 
 Book appointment between patient and doctor
 Prevent booking if doctor is unavailable
-Appointment statuses:
+**Appointment statuses:**
 
 Scheduled
 Completed
 Cancelled
 
 
-Cancel scheduled appointments with timestamp
+**Cancel scheduled appointments with timestamp**
 Retrieve:
 
 Upcoming appointments
@@ -69,9 +69,9 @@ Doctor-specific appointments
 
 
 
-🔹 Reporting
+**🔹 Reporting**
 
-View appointment details:
+**View appointment details:**
 
 Patient Name
 Doctor Name
@@ -87,25 +87,22 @@ Identify same patient-doctor same-day bookings
 Filter appointments for next 7 days
 
 
-⚙️ Technical Implementation
-🔹 Database
+⚙️ **Technical Implementation**
+🔹**Database**
 
 All operations handled via Stored Procedures
 Transactions used for appointment booking
 Referential integrity enforced using Foreign Keys
 Indexes added for:
 
-Doctor
+**Doctor**
 Appointment Date
+**Soft delete implemented for patients**
 
 
-Soft delete implemented for patients
+**API Design**
 
-
-🔹 API Design
-
-RESTful endpoints
-Proper HTTP status codes:
+**Proper HTTP status codes:**
 
 201 → Created
 204 → No Content
@@ -117,52 +114,38 @@ Proper HTTP status codes:
 
 
 
-🔹 Application Architecture
+**Application Architecture**
 Controller → Service Layer → Repository Layer → Database
-
-
 Controllers: Handle HTTP requests
 Services: Business logic
 Repositories: Data access (ADO.NET)
 DTOs: Data transfer between layers
 
-
-🔹 Dependency Injection
-
+**Dependency Injection**
 All services injected via interfaces (IPatientService, IDoctorService, etc.)
-
-
-🔹 Logging
-
-Global request logging middleware:
+ **Logging**
+**Global request logging middleware:**
 
 HTTP Method
 Request Path
 Response Time
 
-
-
-
-🔹 Exception Handling
+**Exception Handling**
 
 Global exception handling middleware
 Structured error responses
 No internal details exposed to client
 
 
-🧠 Domain Logic
+🧠**Domain Logic**
 
 Age calculation in domain model
 Appointment validation:
-
 No past dates
 Valid statuses only
-
-
 Custom exceptions for domain errors
 
-
-📂 Project Structure
+📂**Project Structure**
 HospitalAPI/
 │
 ├── Controllers/
@@ -177,7 +160,7 @@ HospitalAPI/
 └── Program.cs
 
 
-🔌 Setup Instructions
+**🔌 Setup Instructions**
 ✅ Prerequisites
 
 .NET SDK
@@ -185,7 +168,7 @@ SQL Server
 Visual Studio
 
 
-✅ Steps to Run
+**✅ Steps to Run**
 
 Clone repository:
 
@@ -213,7 +196,7 @@ Run the project:
 
 Shelldotnet runShow more lines
 
-Test using Postman
+**Test using Postman**
 
 
 📬 API Testing
@@ -229,7 +212,7 @@ Reports
 
 
 
-📄 Deliverables
+**📄 Deliverables**
 
 ✅ Fully working API
 ✅ Source code (GitHub)
@@ -238,7 +221,7 @@ Reports
 ✅ Documentation (this file)
 
 
-📌 Assumptions
+**📌 Assumptions**
 
 Patient and doctor codes are unique
 Appointment cannot be created in the past
@@ -246,7 +229,7 @@ Soft delete is used for patients
 Stored procedures handle all DB operations
 
 
-🚀 Future Improvements
+**🚀 Future Improvements**
 
 Add authentication (JWT)
 Add frontend UI
@@ -254,6 +237,6 @@ Email/SMS notifications
 Pagination for large data
 
 
-👩‍💻 Author
+**👩‍💻 Author**
 Divyasri Erla
 Software Engineer - Trainee
